@@ -1,0 +1,65 @@
+
+#Install packages to try running stuff
+
+```{r}
+library(TrenchR)
+```
+#' @title Operative Environmental Temperature of a Mussel
+#' 
+#' @description The function estimates body temperature (C, operative environmental temperature) of a mussel. The function implements a steady-state model, which assumes unchanging environmental conditions. 
+#' 
+#' @param l \code{numeric} mussel length (anterior/posterior axis, m).
+#' 
+#' @param h \code{numeric} mussel height (dorsal/ventral axis, m). It is reasonable to assume \code{h = 0.5 * l}.
+#' 
+#' @param T_a \code{numeric} air temperature (C).
+#' 
+#' @param T_g \code{numeric} ground temperature (C).
+#' 
+#' @param S \code{numeric} direct solar flux density (\ifelse{html}{\out{W m<sup>-2</sup>}}{\eqn{W m^-2}{ASCII}}).
+#' 
+#' @param k_d \code{numeric} diffuse fraction, proportion of solar radiation that is diffuse.
+#' 
+#' @param u \code{numeric} wind speed (\ifelse{html}{\out{m s<sup>-1</sup>}}{\eqn{m s^-1}{ASCII}}).
+#' 
+#' @param psi \code{numeric} solar zenith angle (degrees): can be calculated from \code{\link{zenith_angle}}.
+#' 
+#' @param evap \code{logical} Whether mussel is gaping to evaporatively cool. If \code{TRUE}, the function assumes a constant mass loss rate of 5 percent of the initial body mass per hour. 
+#' 
+#' @param cl \code{numeric} fraction of the sky covered by cloud. 
+#' 
+#' @param group \code{character}; options are \code{"aggregated"}: mussels living in beds; \code{"solitary"}: solitary individual, anterior or posterior end facing upwind; and \code{"solitary_valve"}: solitary individual, valve facing upwind.
+#'
+#' @details Thermal radiative flux is calculated following \insertCite{Helmuth1998;textual}{TrenchR}, \insertCite{Helmuth1999;textual}{TrenchR}, and \insertCite{Idso1969;textual}{TrenchR}.
+#'
+#' @return \code{numeric} predicted body (operative environmental) temperature (C).
+#' 
+#' @family biophysical models
+#' 
+#' @references
+#'  \insertAllCited{}
+#'
+#' @export
+#' 
+#' @examples
+#' 
+#' Tb_mussel(l     = 0.1, 
+#'           h     = 0.05, 
+#'           T_a   = 25, 
+#'           T_g   = 30, 
+#'           S     = 500, 
+#'           k_d   = 0.2, 
+#'           u     = 2, 
+#'           psi   = 30, 
+#'           evap  = FALSE, 
+#'           cl    = 0.5, 
+#'           group = "solitary")
+#' 
+
+
+
+# Messing around with mussel stuff
+```{r}
+
+```
+
